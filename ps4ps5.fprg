@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-25 01:43:43 AM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjQ7MDg6MTk6MTMgUE07Mjg4Mw=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjU7MDE6NDM6NDMgQU07MTsyOTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="priceitem" type="Integer" array="False" size=""/>
+            <declare name="exprice" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <output expression="&quot;Do you want to enter the loop&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response == &quot;yes&quot;">
+                <output expression="&quot;Enter quantity of an item&quot;" newline="True"/>
+                <input variable="quantity"/>
+                <output expression="&quot;Enter price of an item&quot;" newline="True"/>
+                <input variable="priceitem"/>
+                <output expression="&quot;The extended price is: &quot;" newline="True"/>
+                <assign variable="exprice" expression="quantity * priceitem"/>
+                <output expression="&quot;exprice :&quot; &amp; exprice" newline="True"/>
+                <if expression="exprice &gt;= 10000.00">
+                    <then>
+                        <assign variable="discount" expression="exprice * .25"/>
+                    </then>
+                    <else>
+                        <assign variable="discount" expression="exprice * .10"/>
+                    </else>
+                </if>
+                <output expression="&quot;Your discounted price is :&quot; &amp; discount" newline="True"/>
+                <output expression="&quot;Do you want to enter the loop agian&quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-24 12:55:12 AM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjQ7MTI6NDg6MjcgQU07Mjg3MA=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjQ7MTI6NTU6MTIgQU07MTsyOTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="startv" type="Integer" array="False" size=""/>
+            <declare name="stopv" type="Integer" array="False" size=""/>
+            <declare name="incrv" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a startvalue&quot;" newline="True"/>
+            <input variable="startv"/>
+            <output expression="&quot;Enter a stopv&quot;" newline="True"/>
+            <input variable="stopv"/>
+            <output expression="&quot;Enter an incrv&quot;" newline="True"/>
+            <input variable="incrv"/>
+            <for variable="startv" start="startv" end="stopv" direction="inc" step="incrv">
+                <output expression="&quot;Loop literation&quot;&amp; startv" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

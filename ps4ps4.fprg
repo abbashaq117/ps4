@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-24 08:16:57 PM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjQ7MDI6NTI6NTkgQU07Mjg2OQ=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjQ7MDg6MTY6NTcgUE07MTsyOTk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="hw" type="Real" array="False" size=""/>
+            <declare name="rateofpay" type="Real" array="False" size=""/>
+            <declare name="hoursworked" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <output expression="&quot;Do you want to enter data(yes or no)&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response == &quot;yes&quot;">
+                <output expression="&quot;Enter last name&quot;" newline="True"/>
+                <input variable="lastname"/>
+                <output expression="&quot;Enter hours worked&quot;" newline="True"/>
+                <input variable="hw"/>
+                <output expression="&quot;Enter rate of pay&quot;" newline="True"/>
+                <input variable="rateofpay"/>
+                <assign variable="grosspay" expression="hw * rateofpay"/>
+                <output expression="&quot;employee name: &quot; &amp; lastname &amp;&quot; grosspay: &quot; &amp; grosspay" newline="True"/>
+                <output expression="&quot;Do you wanna enter another employee (yes or no)&quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
